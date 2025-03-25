@@ -1,6 +1,6 @@
-# GICS (Graph Interactive Community Search)
+# GICS (Interactive Community Search in Graphs)
 
-GICS is an interactive graph community search system that provides an intuitive visualization interface for real-time community search and optimization.
+GICS is an interactive community search system that provides an intuitive visualization interface for real-time community search and optimization.
 
 ## Key Features
 
