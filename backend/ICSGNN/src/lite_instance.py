@@ -114,35 +114,25 @@ class LiteGraphInstance:
             return {"status": "error", "message": str(e)}
 
     def _author_label(self, node):
-        if isinstance(self.authorname, list) and node < len(self.authorname):
-            return self.authorname[node]
-        if isinstance(self.authorname, dict) and node in self.authorname:
-            return self.authorname[node]
+        authorname = self.authorname
+        if authorname is None:
+            return f"Node {node}"
+        try:
+            idx = int(node)
+            if hasattr(authorname, "__getitem__") and hasattr(authorname, "__len__"):
+                if 0 <= idx < len(authorname):
+                    return str(authorname[idx])
+        except (TypeError, ValueError, IndexError):
+            pass
+        if isinstance(authorname, dict) and node in authorname:
+            return authorname[node]
         return f"Node {node}"
 
     def get_node_id_by_name(self, name, strict=False):
-        try:
-            if self.authorname is None:
-                return None
-            name_l = name.lower()
-            if isinstance(self.authorname, list):
-                for node_id, author_name in enumerate(self.authorname):
-                    if name_l in str(author_name).lower():
-                        return int(node_id)
-                if not strict:
-                    for node_id, author_name in enumerate(self.authorname):
-                        if name.split()[0].lower() in str(author_name).lower():
-                            return int(node_id)
-            elif isinstance(self.authorname, dict):
-                for node_id, author_name in self.authorname.items():
-                    if name_l in str(author_name).lower():
-                        return int(node_id)
-            if strict:
-                return None
-            return 27436 if self.graph and self.graph.has_node(27436) else 0
-        except Exception as e:
-            logger.error("get_node_id_by_name: %s", e)
-            return None
+        from src.author_lookup import find_author_node_id
+
+        node_id = find_author_node_id(self.authorname, name, strict=strict)
+        return int(node_id) if node_id is not None else None
 
     def find_author_id(self, name):
         return self.get_node_id_by_name(name, strict=False)

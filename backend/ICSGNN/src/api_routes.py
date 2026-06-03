@@ -3,6 +3,7 @@ import os
 import traceback
 from flask import request, jsonify
 from src.community_models import expand_community
+from src.author_lookup import find_author_node_id
 from collections import deque
 import random
 
@@ -274,40 +275,30 @@ def _build_parameterized_visualization(
     return visualization, query_node
 
 
-def _resolve_query_node(instance, query_name=None, default=27436):
+def _resolve_query_node(instance, query_name=None, default=27484):
     """解析查询作者；找不到时回退到模糊匹配或默认种子，保证 Demo 总有结果。"""
     if query_name and str(query_name).strip():
         name = str(query_name).strip()
+        authorname = getattr(instance, "authorname", None)
+
+        node_id = find_author_node_id(authorname, name, strict=True)
+        if node_id is not None:
+            return int(node_id)
+
+        node_id = find_author_node_id(authorname, name, strict=False)
+        if node_id is not None:
+            logger.info("Fuzzy name match for query '%s' -> %s", name, node_id)
+            return int(node_id)
+
         if hasattr(instance, "get_node_id_by_name"):
             node_id = instance.get_node_id_by_name(name, strict=True)
             if node_id is not None:
-                return node_id
+                return int(node_id)
             node_id = instance.get_node_id_by_name(name, strict=False)
             if node_id is not None:
-                logger.info("Fuzzy name match for query '%s' -> %s", name, node_id)
-                return node_id
-        if hasattr(instance, "find_author_id"):
-            node_id = instance.find_author_id(name)
-            if node_id is not None:
-                return node_id
-        if hasattr(instance, "authorname"):
-            authorname = instance.authorname
-            if isinstance(authorname, dict):
-                for node_id, author_name in authorname.items():
-                    if str(author_name).lower() == name.lower():
-                        return node_id
-                for node_id, author_name in authorname.items():
-                    if name.lower() in str(author_name).lower():
-                        logger.info("Partial name match '%s' -> %s", name, node_id)
-                        return node_id
-            elif isinstance(authorname, list):
-                for i, author_name in enumerate(authorname):
-                    if str(author_name).lower() == name.lower():
-                        return i
-                for i, author_name in enumerate(authorname):
-                    if name.lower() in str(author_name).lower():
-                        logger.info("Partial name match '%s' -> %s", name, i)
-                        return i
+                logger.info("Wrapper name match for query '%s' -> %s", name, node_id)
+                return int(node_id)
+
         logger.warning("Author not found for query '%s', using default seed %s", name, default)
         return int(default)
     return int(default)
@@ -437,7 +428,7 @@ def register_routes(app, socketio=None):
                     try:
                         use_demo_extras = not bool(query_name and str(query_name).strip())
                         query_node = _resolve_query_node(
-                            icsgnn_instance, query_name, default=27436
+                            icsgnn_instance, query_name, default=27484
                         )
                         logger.info("Using query node: %s", query_node)
 
@@ -937,7 +928,7 @@ def register_routes(app, socketio=None):
             query_node = (
                 icsgnn_instance.oldpos[0]
                 if getattr(icsgnn_instance, "oldpos", None)
-                else (icsgnn_instance.current_community[0] if icsgnn_instance.current_community else 27436)
+                else (icsgnn_instance.current_community[0] if icsgnn_instance.current_community else 27484)
             )
             community_size = getattr(icsgnn_instance.args, "community_size", 25)
             visualization, query_node = _build_parameterized_visualization(
@@ -1258,7 +1249,7 @@ def register_routes(app, socketio=None):
             query_node = (
                 icsgnn_instance.oldpos[0]
                 if getattr(icsgnn_instance, "oldpos", None)
-                else 27436
+                else 27484
             )
 
             community_nodes = new_community
@@ -1508,7 +1499,7 @@ def register_routes(app, socketio=None):
             query_node = (
                 icsgnn_instance.oldpos[0]
                 if getattr(icsgnn_instance, "oldpos", None)
-                else 27436
+                else 27484
             )
             community_nodes = new_community
 
