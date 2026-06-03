@@ -309,8 +309,8 @@ def _resolve_query_node(instance, query_name=None, default=27436):
                         logger.info("Partial name match '%s' -> %s", name, i)
                         return i
         logger.warning("Author not found for query '%s', using default seed %s", name, default)
-        return default
-    return default
+        return int(default)
+    return int(default)
 
 
 def _eligible_nodes_for_constraint(graph, constraint, k):

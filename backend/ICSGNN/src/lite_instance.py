@@ -88,7 +88,11 @@ class LiteGraphInstance:
 
             sample_nodes = []
             for node in random_nodes:
-                node_info = {"id": node, "name": self._author_label(node), "keywords": []}
+                node_info = {
+                    "id": int(node),
+                    "name": self._author_label(node),
+                    "keywords": [],
+                }
                 if isinstance(self.keywords, list) and node < len(self.keywords):
                     node_info["keywords"] = self.keywords[node]
                 elif isinstance(self.keywords, dict) and node in self.keywords:
@@ -124,15 +128,15 @@ class LiteGraphInstance:
             if isinstance(self.authorname, list):
                 for node_id, author_name in enumerate(self.authorname):
                     if name_l in str(author_name).lower():
-                        return node_id
+                        return int(node_id)
                 if not strict:
                     for node_id, author_name in enumerate(self.authorname):
                         if name.split()[0].lower() in str(author_name).lower():
-                            return node_id
+                            return int(node_id)
             elif isinstance(self.authorname, dict):
                 for node_id, author_name in self.authorname.items():
                     if name_l in str(author_name).lower():
-                        return node_id
+                        return int(node_id)
             if strict:
                 return None
             return 27436 if self.graph and self.graph.has_node(27436) else 0

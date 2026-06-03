@@ -9,8 +9,28 @@ import os
 import traceback
 
 from flask import Flask, jsonify
+from flask.json import JSONEncoder
 from flask_cors import CORS
 from flask_socketio import SocketIO, emit
+
+try:
+    import numpy as np
+except ImportError:
+    np = None
+
+
+class NumpyJSONEncoder(JSONEncoder):
+    """Render lite 模式下 NetworkX / NumPy 节点 ID 需可 JSON 序列化。"""
+
+    def default(self, obj):
+        if np is not None:
+            if isinstance(obj, np.integer):
+                return int(obj)
+            if isinstance(obj, np.floating):
+                return float(obj)
+            if isinstance(obj, np.ndarray):
+                return obj.tolist()
+        return super().default(obj)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -19,6 +39,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+app.json_encoder = NumpyJSONEncoder
 CORS(
     app,
     resources={r"/*": {"origins": ["http://localhost:5173", "http://127.0.0.1:5173", "*"]}},
