@@ -1,5 +1,4 @@
-# Render.com 一键部署后端 API
-# 在 Render Dashboard 连接本仓库后，将自动创建 Web Service
+# Render.com 一键部署后端 API（512MB 免费实例：轻量模式，不安装 PyTorch）
 # 前端 GitHub Pages 的 VITE_API_BASE_URL 需指向该服务的 URL + /api
 
 services:
@@ -8,11 +7,7 @@ services:
     runtime: python
     rootDir: backend/ICSGNN
     plan: free
-    buildCommand: >-
-      pip install --upgrade pip setuptools wheel &&
-      pip install --no-cache-dir torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu &&
-      pip install --no-cache-dir torch-geometric==2.4.0 &&
-      pip install --no-cache-dir -r requirements-render.txt
+    buildCommand: pip install --upgrade pip && pip install --no-cache-dir -r requirements-render.txt
     startCommand: python run_api.py
     healthCheckPath: /test
     envVars:
@@ -22,5 +17,7 @@ services:
         value: "false"
       - key: HOST
         value: "0.0.0.0"
+      - key: GICS_LITE_MODE
+        value: "true"
       - key: SKIP_STARTUP_INIT
         value: "true"

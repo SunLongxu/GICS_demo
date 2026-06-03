@@ -1,9 +1,8 @@
 import logging
+import os
 import traceback
 from flask import request, jsonify
-from src.api_wrapper import ICSGNNWrapper
 from src.community_models import expand_community
-from main import search_community
 from collections import deque
 import random
 
@@ -13,40 +12,53 @@ logger = logging.getLogger(__name__)
 # 全局变量存储ICSGNN实例
 icsgnn_instance = None
 
+def _lite_mode_enabled():
+    return os.environ.get("GICS_LITE_MODE", "").lower() in ("1", "true", "yes")
+
+
 def initialize_icsgnn():
     """
-    初始化ICSGNN Wrapper实例
+    初始化图服务实例。Render 等低内存环境使用 LiteGraphInstance（无 PyTorch）。
     """
     global icsgnn_instance
     try:
-        if icsgnn_instance is None:
-            logger.info("Initializing ICSGNN Wrapper...")
-            icsgnn_instance = ICSGNNWrapper()
-            
-            # 检查是否已经加载了数据集
-            if not hasattr(icsgnn_instance, 'graph') or icsgnn_instance.graph is None:
-                logger.info("Loading DBLP dataset...")
-                # 加载DBLP数据集
-                icsgnn_instance.load_dataset("DBLP")
-                logger.info("DBLP dataset loaded successfully")
-            else:
-                logger.info("Dataset already loaded, skipping...")
-                
-            # 确保recommender已初始化
-            if not hasattr(icsgnn_instance, 'recommender') or icsgnn_instance.recommender is None:
-                logger.info("Initializing recommender...")
-                icsgnn_instance.initialize_recommender()
-                logger.info("Successfully initialized recommender")
-            else:
-                logger.info("Recommender already initialized")
-                
-            logger.info("ICSGNN Wrapper initialized successfully")
-        else:
-            logger.info("ICSGNN Wrapper already initialized")
+        if icsgnn_instance is not None:
+            logger.info("Graph instance already initialized")
+            return True
 
+        if _lite_mode_enabled():
+            from src.lite_instance import LiteGraphInstance
+
+            logger.info("Initializing LiteGraphInstance (GICS_LITE_MODE)...")
+            icsgnn_instance = LiteGraphInstance()
+            if not icsgnn_instance.load_dataset("DBLP"):
+                return False
+            logger.info("LiteGraphInstance ready")
+            return True
+
+        from src.api_wrapper import ICSGNNWrapper
+
+        logger.info("Initializing ICSGNN Wrapper...")
+        icsgnn_instance = ICSGNNWrapper()
+
+        if not hasattr(icsgnn_instance, "graph") or icsgnn_instance.graph is None:
+            logger.info("Loading DBLP dataset...")
+            icsgnn_instance.load_dataset("DBLP")
+            logger.info("DBLP dataset loaded successfully")
+        else:
+            logger.info("Dataset already loaded, skipping...")
+
+        if not hasattr(icsgnn_instance, "recommender") or icsgnn_instance.recommender is None:
+            logger.info("Initializing recommender...")
+            icsgnn_instance.initialize_recommender()
+            logger.info("Successfully initialized recommender")
+        else:
+            logger.info("Recommender already initialized")
+
+        logger.info("ICSGNN Wrapper initialized successfully")
         return True
     except Exception as e:
-        logger.error(f"Failed to initialize ICSGNN Wrapper: {str(e)}")
+        logger.error("Failed to initialize graph instance: %s", e)
         logger.error(traceback.format_exc())
         return False
 
@@ -69,10 +81,17 @@ def _apply_search_config(constraint, parameter):
 
 def _get_node_label(instance, node):
     if hasattr(instance, "authorname"):
-        if isinstance(instance.authorname, list) and node < len(instance.authorname):
-            return instance.authorname[node]
-        if isinstance(instance.authorname, dict) and node in instance.authorname:
-            return instance.authorname[node]
+        authorname = instance.authorname
+        if isinstance(authorname, list) and node < len(authorname):
+            return authorname[node]
+        if isinstance(authorname, dict) and node in authorname:
+            return authorname[node]
+        if hasattr(authorname, "__getitem__") and hasattr(authorname, "__len__"):
+            try:
+                if 0 <= int(node) < len(authorname):
+                    return str(authorname[int(node)])
+            except (TypeError, ValueError, IndexError):
+                pass
     return f"Node {node}"
 
 
@@ -82,7 +101,11 @@ def _get_node_keywords(instance, node):
         if hasattr(instance, "keywords"):
             if isinstance(instance.keywords, dict) and node in instance.keywords:
                 keywords_str = instance.keywords[node]
-            elif isinstance(instance.keywords, list) and node < len(instance.keywords):
+            el            if isinstance(instance.keywords, list) and node < len(instance.keywords):
+                keywords_str = instance.keywords[node]
+            elif hasattr(instance.keywords, "__len__") and hasattr(
+                instance.keywords, "__getitem__"
+            ) and node < len(instance.keywords):
                 keywords_str = instance.keywords[node]
             else:
                 keywords_str = None
@@ -468,6 +491,12 @@ def register_routes(app, socketio=None):
         Search for communities based on a query
         """
         try:
+            if _lite_mode_enabled():
+                return jsonify({
+                    "status": "error",
+                    "message": "Full GNN search is disabled in lite mode; use GET /api/graph/initial instead.",
+                }), 501
+
             # Get query parameters
             data = request.get_json()
             query = data.get('query')
@@ -1225,12 +1254,7 @@ def register_routes(app, socketio=None):
                 icsgnn_instance.current_community = new_community
             if hasattr(icsgnn_instance, 'oldres'):
                 icsgnn_instance.oldres = new_community
-                
-            # 获取所有节点以便进行重新计算
-            all_nodes = list(icsgnn_instance.graph.nodes())
-            
-            # 创建用于返回的可视化数据
-            # 固定使用27436作为查询节点
+
             query_node = (
                 icsgnn_instance.oldpos[0]
                 if getattr(icsgnn_instance, "oldpos", None)
@@ -1480,10 +1504,7 @@ def register_routes(app, socketio=None):
                 icsgnn_instance.current_community = new_community
             if hasattr(icsgnn_instance, 'oldres'):
                 icsgnn_instance.oldres = new_community
-                
-            # 获取所有节点以便进行重新计算
-            all_nodes = list(icsgnn_instance.graph.nodes())
-            
+
             query_node = (
                 icsgnn_instance.oldpos[0]
                 if getattr(icsgnn_instance, "oldpos", None)

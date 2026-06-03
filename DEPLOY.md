@@ -19,8 +19,10 @@
 
 | 现象 | 处理 |
 |------|------|
-| Build 阶段 OOM / `Killed` | 已用 `requirements-render.txt` + `--no-cache-dir` + CPU 版 `torch`，请 **Manual Deploy → Clear build cache & deploy** 重试 |
-| Deploy 阶段启动超时 | 已设置 `SKIP_STARTUP_INIT=true`，先起 `/test`，首次搜图时再加载 DBLP |
+| Build 阶段 OOM / `Killed` | 已改为 **不安装 PyTorch**（`GICS_LITE_MODE` + `requirements-render.txt`），请 **Clear build cache & deploy** |
+| Deploy 阶段 `Out of memory (512Mi)` | 轻量模式只加载 NetworkX 图，不 import torch；首次搜索才加载 DBLP |
+| `No open ports detected` | 进程 OOM 崩溃导致未监听 `PORT`；修好内存后应自动恢复 |
+| Deploy 阶段启动超时 | `SKIP_STARTUP_INIT=true`：先起 `/test`，首次搜图时再加载图数据 |
 | Blueprint 与手动服务冲突 | Dashboard 删除失败服务，仅用仓库根目录 `render.yaml` 重新 **New → Blueprint** |
 
 > 若 Render 服务名不同，请在 GitHub 仓库 **Settings → Secrets and variables → Actions → Variables** 设置：

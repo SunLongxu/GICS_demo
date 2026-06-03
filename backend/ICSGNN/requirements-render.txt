@@ -1,4 +1,4 @@
-# Render 生产环境精简依赖（不含 PyTorch，由 render.yaml buildCommand 单独安装 CPU 版）
+# Render 生产环境：无 PyTorch，配合 GICS_LITE_MODE 使用 LiteGraphInstance
 flask==2.0.1
 flask-cors==4.0.0
 flask-socketio==5.3.6
