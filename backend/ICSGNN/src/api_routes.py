@@ -106,8 +106,11 @@ def _get_node_keywords(instance, node):
                 keywords_str = instance.keywords[node]
             elif hasattr(instance.keywords, "__len__") and hasattr(
                 instance.keywords, "__getitem__"
-            ) and node < len(instance.keywords):
-                keywords_str = instance.keywords[node]
+            ):
+                idx = int(node)
+                keywords_str = (
+                    instance.keywords[idx] if 0 <= idx < len(instance.keywords) else None
+                )
             else:
                 keywords_str = None
             if isinstance(keywords_str, str):
@@ -1302,70 +1305,33 @@ def register_routes(app, socketio=None):
             
             # 准备节点数据
             nodes = []
-            
-            # 辅助函数：获取节点标签
-            def get_node_label(instance, node):
-                if hasattr(instance, 'authorname'):
-                    if isinstance(instance.authorname, list) and node < len(instance.authorname):
-                        return instance.authorname[node]
-                    elif isinstance(instance.authorname, dict) and node in instance.authorname:
-                        return instance.authorname[node]
-                return f"Node {node}"
-            
-            # 辅助函数：获取节点关键词
-            def get_node_keywords(instance, node):
-                keywords = []
-                try:
-                    if hasattr(instance, 'keywords'):
-                        if isinstance(instance.keywords, dict) and node in instance.keywords:
-                            keywords_str = instance.keywords[node]
-                            if isinstance(keywords_str, str):
-                                if "&" in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split("&")]
-                                elif "," in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split(",")]
-                                else:
-                                    keywords = [keywords_str.strip()]
-                        elif isinstance(instance.keywords, list) and node < len(instance.keywords):
-                            keywords_str = instance.keywords[node]
-                            if isinstance(keywords_str, str):
-                                if "&" in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split("&")]
-                                elif "," in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split(",")]
-                                else:
-                                    keywords = [keywords_str.strip()]
-                
-                except Exception as e:
-                    logger.error(f"Error getting keywords for node {node}: {str(e)}")
-                return keywords or []
-            
+
             # 添加查询节点
             nodes.append({
                 "id": str(query_node),
-                "label": get_node_label(icsgnn_instance, query_node),
-                "type": "query", 
-                "keywords": get_node_keywords(icsgnn_instance, query_node)
+                "label": _get_node_label(icsgnn_instance, query_node),
+                "type": "query",
+                "keywords": _get_node_keywords(icsgnn_instance, query_node)
             })
-            
+
             # 添加社区节点
             for node in real_community_nodes:
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": "community",
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
-                
+
             # 添加推荐插入节点
             for node in recommend_insert_nodes:
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": "insert",
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
-                
+
             # 添加普通节点，包括刚删除的节点
             for node in real_normal_nodes:
                 # 特殊处理Ameet Talwalkar，给他特殊标记
@@ -1375,18 +1341,18 @@ def register_routes(app, socketio=None):
 
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": node_type,
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
-                
+
             # 添加推荐删除节点
             for node in recommend_delete_nodes:
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": "delete",
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
                 
             # 准备边数据
@@ -1548,86 +1514,49 @@ def register_routes(app, socketio=None):
             
             # 准备节点数据
             nodes = []
-            
-            # 辅助函数：获取节点标签
-            def get_node_label(instance, node):
-                if hasattr(instance, 'authorname'):
-                    if isinstance(instance.authorname, list) and node < len(instance.authorname):
-                        return instance.authorname[node]
-                    elif isinstance(instance.authorname, dict) and node in instance.authorname:
-                        return instance.authorname[node]
-                return f"Node {node}"
-            
-            # 辅助函数：获取节点关键词
-            def get_node_keywords(instance, node):
-                keywords = []
-                try:
-                    if hasattr(instance, 'keywords'):
-                        if isinstance(instance.keywords, dict) and node in instance.keywords:
-                            keywords_str = instance.keywords[node]
-                            if isinstance(keywords_str, str):
-                                if "&" in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split("&")]
-                                elif "," in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split(",")]
-                                else:
-                                    keywords = [keywords_str.strip()]
-                        elif isinstance(instance.keywords, list) and node < len(instance.keywords):
-                            keywords_str = instance.keywords[node]
-                            if isinstance(keywords_str, str):
-                                if "&" in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split("&")]
-                                elif "," in keywords_str:
-                                    keywords = [kw.strip() for kw in keywords_str.split(",")]
-                                else:
-                                    keywords = [keywords_str.strip()]
-                
-                except Exception as e:
-                    logger.error(f"Error getting keywords for node {node}: {str(e)}")
-                return keywords or []
-            
+
             # 添加查询节点
             nodes.append({
                 "id": str(query_node),
-                "label": get_node_label(icsgnn_instance, query_node),
-                "type": "query", 
-                "keywords": get_node_keywords(icsgnn_instance, query_node)
+                "label": _get_node_label(icsgnn_instance, query_node),
+                "type": "query",
+                "keywords": _get_node_keywords(icsgnn_instance, query_node)
             })
-            
+
             # 添加社区节点，包括刚添加的节点
             for node in real_community_nodes:
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": "community",
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
-                
+
             # 添加推荐插入节点
             for node in recommend_insert_nodes:
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": "insert",
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
-                
+
             # 添加普通节点
             for node in real_normal_nodes:
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": "normal",
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
-                
+
             # 添加推荐删除节点
             for node in recommend_delete_nodes:
                 nodes.append({
                     "id": str(node),
-                    "label": get_node_label(icsgnn_instance, node),
+                    "label": _get_node_label(icsgnn_instance, node),
                     "type": "delete",
-                    "keywords": get_node_keywords(icsgnn_instance, node)
+                    "keywords": _get_node_keywords(icsgnn_instance, node)
                 })
                 
             # 准备边数据
