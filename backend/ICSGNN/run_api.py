@@ -60,13 +60,25 @@ try:
 
     register_routes(app, socketio)
 
-    with app.app_context():
-        from src.api_routes import initialize_icsgnn
+    skip_startup_init = os.environ.get("SKIP_STARTUP_INIT", "").lower() in (
+        "1",
+        "true",
+        "yes",
+    )
+    if skip_startup_init:
+        logger.info(
+            "Skipping ICSGNN startup init (SKIP_STARTUP_INIT); will load on first API request"
+        )
+    else:
+        with app.app_context():
+            from src.api_routes import initialize_icsgnn
 
-        if initialize_icsgnn():
-            logger.info("ICSGNN initialized at startup")
-        else:
-            logger.warning("ICSGNN startup initialization failed; will retry on first API call")
+            if initialize_icsgnn():
+                logger.info("ICSGNN initialized at startup")
+            else:
+                logger.warning(
+                    "ICSGNN startup initialization failed; will retry on first API call"
+                )
 
     logger.info("Registered all API routes")
 

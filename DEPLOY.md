@@ -12,8 +12,16 @@
 1. 登录 [Render](https://render.com)，**New → Blueprint**
 2. 连接 GitHub 仓库 `SunLongxu/GICS_demo`
 3. 使用仓库根目录的 `render.yaml` 创建服务 `gics-demo-api`
-4. 首次构建约 10–20 分钟（需安装 PyTorch）；完成后访问  
+4. 首次构建约 10–20 分钟（安装 **CPU 版** PyTorch）；完成后访问  
    https://gics-demo-api.onrender.com/test 应返回 JSON success
+
+### Render 部署失败常见原因
+
+| 现象 | 处理 |
+|------|------|
+| Build 阶段 OOM / `Killed` | 已用 `requirements-render.txt` + `--no-cache-dir` + CPU 版 `torch`，请 **Manual Deploy → Clear build cache & deploy** 重试 |
+| Deploy 阶段启动超时 | 已设置 `SKIP_STARTUP_INIT=true`，先起 `/test`，首次搜图时再加载 DBLP |
+| Blueprint 与手动服务冲突 | Dashboard 删除失败服务，仅用仓库根目录 `render.yaml` 重新 **New → Blueprint** |
 
 > 若 Render 服务名不同，请在 GitHub 仓库 **Settings → Secrets and variables → Actions → Variables** 设置：
 > - `VITE_API_BASE_URL` = `https://你的服务.onrender.com/api`

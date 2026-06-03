@@ -8,15 +8,19 @@ services:
     runtime: python
     rootDir: backend/ICSGNN
     plan: free
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    buildCommand: >-
+      pip install --upgrade pip setuptools wheel &&
+      pip install --no-cache-dir torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu &&
+      pip install --no-cache-dir torch-geometric==2.4.0 &&
+      pip install --no-cache-dir -r requirements-render.txt
     startCommand: python run_api.py
     healthCheckPath: /test
     envVars:
       - key: PYTHON_VERSION
-        value: "3.11.0"
+        value: "3.11.9"
       - key: FLASK_DEBUG
         value: "false"
       - key: HOST
         value: "0.0.0.0"
-      - key: PORT
-        value: "10000"
+      - key: SKIP_STARTUP_INIT
+        value: "true"
