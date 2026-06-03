@@ -1,0 +1,93 @@
+Round 0 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. ChengXiang Zhai DM
+4. Philip S. Yu DM&DB&CV
+5. Zheng Chen DM&NLP&ML
+6. Chao Zhang CV&DM&NLP&ML&Sys
+7. Wei Wang CV&DB&DM&NLP&ML&Sys
+8. Xifeng Yan DM&DB
+9. Hujun Bao CV&DB&DM
+10. Yi-Zhou Sun DM
+11. Qiang Yang DM&DB
+12. Jian Pei DM&NLP
+13. Shuicheng Yan CV
+14. Heng Ji NLP
+15. Xiang Ren DM&Sys
+16. Chi Wang DM&CV
+17. Qi Li CV&DB&DM&NLP&ML&Sys
+18. Charu C. Aggarwal DM
+19. Ben Y. Zhao Sys
+20. Jing Gao DM
+21. Hong Cheng CV&ML&DM
+22. Tarek Abdelzaher DM
+23. Lance M. Kaplan DM
+24. Jie Tang DM
+25. Haitao Zheng Sys
+26. Thomas S. Huang CV
+27. Dacheng Tao CV
+28. Haixun Wang DM&DB
+29. Bo Li CV&DB&DM&NLP&ML&Sys
+30. Fei Wang CV&DB&DM&ML&Sys
+Round 1 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Jian Pei DM&NLP
+5. Philip S. Yu DM&DB&CV
+6. Wei Wang CV&DB&DM&NLP&ML&Sys
+7. Shuicheng Yan CV
+8. Xifeng Yan DM&DB
+9. Qiang Yang DM&DB
+10. ChengXiang Zhai DM
+11. Yi-Zhou Sun DM
+12. Zheng Chen DM&NLP&ML
+13. Thomas S. Huang CV
+14. Dacheng Tao CV
+15. Ming-Hsuan Yang CV
+16. Chao Zhang CV&DM&NLP&ML&Sys
+17. Bo Li CV&DB&DM&NLP&ML&Sys
+18. Heng Ji NLP
+19. Hong Cheng CV&ML&DM
+20. Xiang Ren DM&Sys
+21. Haixun Wang DM&DB
+22. Jiebo Luo CV&DM
+23. Wei Zhang CV&DB&DM&NLP&ML&Sys
+24. Dong Wang CV&DB&DM&NLP&ML
+25. Chi Wang DM&CV
+26. Jeffrey Xu Yu DB
+27. Dong Xu CV&DB
+28. Jiwen Lu CV
+29. Fei Wang CV&DB&DM&ML&Sys
+30. Charu C. Aggarwal DM
+Round 2 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Philip S. Yu DM&DB&CV
+5. Jian Pei DM&NLP
+6. ChengXiang Zhai DM
+7. Wei Wang CV&DB&DM&NLP&ML&Sys
+8. Xifeng Yan DM&DB
+9. Shuicheng Yan CV
+10. Yi-Zhou Sun DM
+11. Zheng Chen DM&NLP&ML
+12. Qiang Yang DM&DB
+13. Chao Zhang CV&DM&NLP&ML&Sys
+14. Thomas S. Huang CV
+15. Dacheng Tao CV
+16. Chi Wang DM&CV
+17. Heng Ji NLP
+18. Charu C. Aggarwal DM
+19. Ming-Hsuan Yang CV
+20. Xiang Ren DM&Sys
+21. Hong Cheng CV&ML&DM
+22. Jing Gao DM
+23. Haixun Wang DM&DB
+24. Tarek Abdelzaher DM
+25. Jiebo Luo CV&DM
+26. Qi Li CV&DB&DM&NLP&ML&Sys
+27. Jie Tang DM
+28. Guofeng Zhang CV
+29. Bo Li CV&DB&DM&NLP&ML&Sys
+30. Jiwen Lu CV

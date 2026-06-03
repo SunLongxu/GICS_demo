@@ -1,0 +1,110 @@
+Round 0 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Jian Pei DM&NLP
+5. Philip S. Yu DM&DB&CV
+6. Wei Wang CV&DB&DM&NLP&ML&Sys
+7. Xifeng Yan DM&DB
+8. Zheng Chen DM&NLP&ML
+9. Heng Ji NLP
+10. ChengXiang Zhai DM
+11. Yi-Zhou Sun DM
+12. Shuicheng Yan CV
+13. Qiang Yang DM&DB
+14. Xiang Ren DM&Sys
+15. Chao Zhang CV&DM&NLP&ML&Sys
+16. Thomas S. Huang CV
+17. Chi Wang DM&CV
+18. Ming-Hsuan Yang CV
+19. Dacheng Tao CV
+20. Hong Cheng CV&ML&DM
+21. Haixun Wang DM&DB
+22. Bo Li CV&DB&DM&NLP&ML&Sys
+23. Dong Wang CV&DB&DM&NLP&ML
+24. Charu C. Aggarwal DM
+25. Qi Li CV&DB&DM&NLP&ML&Sys
+26. Jie Tang DM
+27. Jeffrey Xu Yu DB
+28. Lance M. Kaplan DM
+29. Wei Zhang CV&DB&DM&NLP&ML&Sys
+30. Shih-Fu Chang CV&Sys
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Jing Gao DM
+2.Tarek Abdelzaher DM
+3.Weizhu Chen DM
+4.Rui Wang CV&DB&DM&NLP&ML&Sys
+5.Martin Ester DM&NLP
+6.Steven Minton DM
+7.Jing Liu CV&DB&DM&NLP&ML
+8.Chang Xu DM&CV&ML
+9.Jia-Bin Huang CV
+10.Roopnath Grandhi DM
+Recommended authors for deletion: 
+ 0. No deletion.
+1.Jie Tang DM
+2.Ming-Hsuan Yang CV
+3.Wei Zhang CV&DB&DM&NLP&ML&Sys
+4.Hujun Bao CV&DB&DM
+5.Qi Li CV&DB&DM&NLP&ML&Sys
+6.Jeffrey Xu Yu DB
+7.Shih-Fu Chang CV&Sys
+8.Chao Zhang CV&DM&NLP&ML&Sys
+9.ChengXiang Zhai DM
+10.Lance M. Kaplan DM
+Round 1 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. ChengXiang Zhai DM
+5. Zheng Chen DM&NLP&ML
+6. Philip S. Yu DM&DB&CV
+7. Xifeng Yan DM&DB
+8. Wei Wang CV&DB&DM&NLP&ML&Sys
+9. Yi-Zhou Sun DM
+10. Heng Ji NLP
+11. Chao Zhang CV&DM&NLP&ML&Sys
+12. Jian Pei DM&NLP
+13. Xiang Ren DM&Sys
+14. Qiang Yang DM&DB
+15. Shuicheng Yan CV
+16. Chi Wang DM&CV
+17. Qi Li CV&DB&DM&NLP&ML&Sys
+18. Charu C. Aggarwal DM
+19. Lance M. Kaplan DM
+20. Tarek Abdelzaher DM
+21. Jing Gao DM
+22. Hong Cheng CV&ML&DM
+23. Thomas S. Huang CV
+24. Jie Tang DM
+25. Ben Y. Zhao Sys
+26. Dacheng Tao CV
+27. Fangbo Tao DM
+28. Haixun Wang DM&DB
+29. Bo Li CV&DB&DM&NLP&ML&Sys
+30. Xiao Yu DM&Sys
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Marina Danilevsky DM&DB
+2.Tianyi Wu DM&DB
+3.Weizhu Chen DM
+4.Heung-Yeung Shum CV
+5.Shuochao Yao DM
+6.Christos Faloutsos DM&NLP
+7.Xing Li Sys&DM
+8.Steven Minton DM
+9.Roopnath Grandhi DM
+10.Neelakantan Sundaresan DM
+Recommended authors for deletion: 
+ 0. No deletion.
+1.Yi-Zhou Sun DM
+2.Gang Wang CV&NLP&ML&DM
+3.Hujun Bao CV&DB&DM
+4.Thomas S. Huang CV
+5.Fangbo Tao DM
+6.Ben Y. Zhao Sys
+7.Jian Pei DM&NLP
+8.Hong Cheng CV&ML&DM
+9.Bo Li CV&DB&DM&NLP&ML&Sys
+10.Chao Zhang CV&DM&NLP&ML&Sys

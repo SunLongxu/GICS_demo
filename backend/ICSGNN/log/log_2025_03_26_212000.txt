@@ -1,0 +1,33 @@
+Query No.: 0
+Query name:Jiawei Han
+Round 0 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Jian Pei DM&NLP
+5. Micheline Kamber DM
+6. Philip S. Yu DM&DB&CV
+7. Wei Wang CV&DB&DM&NLP&ML&Sys
+8. Shuicheng Yan CV
+9. Xifeng Yan DM&DB
+10. ChengXiang Zhai DM
+11. Yi-Zhou Sun DM
+12. Zheng Chen DM&NLP&ML
+13. Qiang Yang DM&DB
+14. Chao Zhang CV&DM&NLP&ML&Sys
+15. Thomas S. Huang CV
+16. Heng Ji NLP
+17. Dacheng Tao CV
+18. Ming-Hsuan Yang CV
+19. Xiang Ren DM&Sys
+20. Chi Wang DM&CV
+21. Charu C. Aggarwal DM
+22. Hong Cheng CV&ML&DM
+23. Jiebo Luo CV&DM
+24. Haixun Wang DM&DB
+25. Bo Li CV&DB&DM&NLP&ML&Sys
+26. Jie Tang DM
+27. Dong Xu CV&DB
+28. Qi Li CV&DB&DM&NLP&ML&Sys
+29. Jing Gao DM
+30. Jiwen Lu CV

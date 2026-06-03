@@ -1,0 +1,31 @@
+Round 0 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Jian Pei DM&NLP
+5. Philip S. Yu DM&DB&CV
+6. Xifeng Yan DM&DB
+7. Wei Wang CV&DB&DM&NLP&ML&Sys
+8. ChengXiang Zhai DM
+9. Zheng Chen DM&NLP&ML
+10. Yi-Zhou Sun DM
+11. Qiang Yang DM&DB
+12. Shuicheng Yan CV
+13. Heng Ji NLP
+14. Chao Zhang CV&DM&NLP&ML&Sys
+15. Xiang Ren DM&Sys
+16. Hong Cheng CV&ML&DM
+17. Chi Wang DM&CV
+18. Thomas S. Huang CV
+19. Dacheng Tao CV
+20. Haixun Wang DM&DB
+21. Ming-Hsuan Yang CV
+22. Charu C. Aggarwal DM
+23. Bo Li CV&DB&DM&NLP&ML&Sys
+24. Jeffrey Xu Yu DB
+25. Qi Li CV&DB&DM&NLP&ML&Sys
+26. Jie Tang DM
+27. Dong Wang CV&DB&DM&NLP&ML
+28. Wei Zhang CV&DB&DM&NLP&ML&Sys
+29. Tarek Abdelzaher DM
+30. Bolin Ding DM&DB&ML

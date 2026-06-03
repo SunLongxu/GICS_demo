@@ -1,0 +1,93 @@
+Round 0 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. ChengXiang Zhai DM
+4. Philip S. Yu DM&DB&CV
+5. Xifeng Yan DM&DB
+6. Zheng Chen DM&NLP&ML
+7. Jian Pei DM&NLP
+8. Wei Wang CV&DB&DM&NLP&ML&Sys
+9. Hujun Bao CV&DB&DM
+10. Yi-Zhou Sun DM
+11. Chao Zhang CV&DM&NLP&ML&Sys
+12. Qiang Yang DM&DB
+13. Heng Ji NLP
+14. Chi Wang DM&CV
+15. Shuicheng Yan CV
+16. Xiang Ren DM&Sys
+17. Charu C. Aggarwal DM
+18. Qi Li CV&DB&DM&NLP&ML&Sys
+19. Jing Gao DM
+20. Lance M. Kaplan DM
+21. Hong Cheng CV&ML&DM
+22. Tarek Abdelzaher DM
+23. Jie Tang DM
+24. Thomas S. Huang CV
+25. Haixun Wang DM&DB
+26. Bolin Ding DM&DB&ML
+27. Carl Yang DM
+28. Xiao Yu DM&Sys
+29. Dacheng Tao CV
+30. Deng Cai DM&NLP
+Round 1 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Shuicheng Yan CV
+5. Philip S. Yu DM&DB&CV
+6. Wei Wang CV&DB&DM&NLP&ML&Sys
+7. Jian Pei DM&NLP
+8. Zheng Chen DM&NLP&ML
+9. ChengXiang Zhai DM
+10. Thomas S. Huang CV
+11. Qiang Yang DM&DB
+12. Xifeng Yan DM&DB
+13. Dacheng Tao CV
+14. Ming-Hsuan Yang CV
+15. Chao Zhang CV&DM&NLP&ML&Sys
+16. Yi-Zhou Sun DM
+17. Heng Ji NLP
+18. Xiang Ren DM&Sys
+19. Jiebo Luo CV&DM
+20. Jiwen Lu CV
+21. Bo Li CV&DB&DM&NLP&ML&Sys
+22. Dong Xu CV&DB
+23. Chi Wang DM&CV
+24. Charu C. Aggarwal DM
+25. Dong Wang CV&DB&DM&NLP&ML
+26. Wei Zhang CV&DB&DM&NLP&ML&Sys
+27. Qi Li CV&DB&DM&NLP&ML&Sys
+28. Guofeng Zhang CV
+29. Jie Tang DM
+30. Fei Wang CV&DB&DM&ML&Sys
+Round 2 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. ChengXiang Zhai DM
+4. Philip S. Yu DM&DB&CV
+5. Jian Pei DM&NLP
+6. Wei Wang CV&DB&DM&NLP&ML&Sys
+7. Hujun Bao CV&DB&DM
+8. Xifeng Yan DM&DB
+9. Yi-Zhou Sun DM
+10. Zheng Chen DM&NLP&ML
+11. Chao Zhang CV&DM&NLP&ML&Sys
+12. Qiang Yang DM&DB
+13. Chi Wang DM&CV
+14. Heng Ji NLP
+15. Shuicheng Yan CV
+16. Xiang Ren DM&Sys
+17. Charu C. Aggarwal DM
+18. Hong Cheng CV&ML&DM
+19. Ben Y. Zhao Sys
+20. Jing Gao DM
+21. Qi Li CV&DB&DM&NLP&ML&Sys
+22. Tarek Abdelzaher DM
+23. Haitao Zheng Sys
+24. Jie Tang DM
+25. Lance M. Kaplan DM
+26. Xiao Yu DM&Sys
+27. Haixun Wang DM&DB
+28. Bolin Ding DM&DB&ML
+29. Bo Zhao CV&Sys&DM
+30. Lu Su DM

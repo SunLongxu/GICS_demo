@@ -1,0 +1,62 @@
+Round 0 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Philip S. Yu DM&DB&CV
+5. Jian Pei DM&NLP
+6. Shuicheng Yan CV
+7. Wei Wang CV&DB&DM&NLP&ML&Sys
+8. Xifeng Yan DM&DB
+9. ChengXiang Zhai DM
+10. Zheng Chen DM&NLP&ML
+11. Qiang Yang DM&DB
+12. Yi-Zhou Sun DM
+13. Chao Zhang CV&DM&NLP&ML&Sys
+14. Thomas S. Huang CV
+15. Heng Ji NLP
+16. Dacheng Tao CV
+17. Ming-Hsuan Yang CV
+18. Xiang Ren DM&Sys
+19. Chi Wang DM&CV
+20. Bo Li CV&DB&DM&NLP&ML&Sys
+21. Hong Cheng CV&ML&DM
+22. Jiebo Luo CV&DM
+23. Charu C. Aggarwal DM
+24. Ben Y. Zhao Sys
+25. Qi Li CV&DB&DM&NLP&ML&Sys
+26. Dong Xu CV&DB
+27. Haixun Wang DM&DB
+28. Wei Zhang CV&DB&DM&NLP&ML&Sys
+29. Jie Tang DM
+30. Dong Wang CV&DB&DM&NLP&ML
+Round 1 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Shuicheng Yan CV
+5. Philip S. Yu DM&DB&CV
+6. Jian Pei DM&NLP
+7. Wei Wang CV&DB&DM&NLP&ML&Sys
+8. Xifeng Yan DM&DB
+9. Thomas S. Huang CV
+10. Dacheng Tao CV
+11. Ming-Hsuan Yang CV
+12. Qiang Yang DM&DB
+13. ChengXiang Zhai DM
+14. Zheng Chen DM&NLP&ML
+15. Chao Zhang CV&DM&NLP&ML&Sys
+16. Yi-Zhou Sun DM
+17. Jiwen Lu CV
+18. Jiebo Luo CV&DM
+19. Dong Xu CV&DB
+20. Bo Li CV&DB&DM&NLP&ML&Sys
+21. Guofeng Zhang CV
+22. Charu C. Aggarwal DM
+23. Bing Shuai CV
+24. Chi Wang DM&CV
+25. Hong Cheng CV&ML&DM
+26. Yap-Peng Tan CV
+27. Dong Wang CV&DB&DM&NLP&ML
+28. Haixun Wang DM&DB
+29. Jie Tang DM
+30. Junsong Yuan CV

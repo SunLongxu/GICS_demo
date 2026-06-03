@@ -1,0 +1,46 @@
+Round 0 Result community:
+1. Michael J. Franklin DB
+2. Johannes Gehrke DB
+3. Rakesh Agrawal DM&DB
+4. Louiqa Raschid DB
+5. Ion Stoica Sys
+6. Stanley B. Zdonik DB
+7. Michael Stonebraker DB
+8. Samuel Madden DB
+9. David J. DeWitt DB
+10. Raghu Ramakrishnan DB
+11. César A. Galindo-Legaria DB
+12. Blase Ur DB
+13. Michael J. Carey DB
+14. Tim Kraska DB
+15. Scott Shenker Sys
+16. H. V. Jagadish DB
+17. Gerhard Weikum DB
+18. David Maier DB
+19. Joseph M. Hellerstein DB
+20. Christos Faloutsos DM&NLP
+21. Magdalena Balazinska DB
+22. Alan J. Demers DB
+23. Jeffrey F. Naughton DB
+24. Donald Kossmann DB
+25. Alon Halevy DB
+26. Surajit Chaudhuri DB
+27. Michael Lesk DB
+28. Stan Zdonik DB
+29. Hector Garcia-Molina DB
+30. Mirek Riedewald DB
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Alexander S. Szalay DB
+2.Raluca A. Popa Sys
+3.Bin Liu CV&DB&DM&NLP&ML&Sys
+4.John C. Mitchell ML
+5.Barna Saha DB&Theory
+6.Mert Akdere DB
+7.Milind M. Joshi DB
+8.Daniel Kifer DB
+9.Anand Srinivasan DB
+10.Ronald Fagin DB
+Recommended authors for deletion: 
+ 0. No deletion.
+1.Johannes Gehrke DB

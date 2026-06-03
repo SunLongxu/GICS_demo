@@ -1,0 +1,55 @@
+Round 1 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Philip S. Yu DM&DB&CV
+5. Jian Pei DM&NLP
+6. Zheng Chen DM&NLP&ML
+7. Wei Wang CV&DB&DM&NLP&ML&Sys
+8. Xifeng Yan DM&DB
+9. ChengXiang Zhai DM
+10. Yi-Zhou Sun DM
+11. Qiang Yang DM&DB
+12. Chao Zhang CV&DM&NLP&ML&Sys
+13. Shuicheng Yan CV
+14. Heng Ji NLP
+15. Xiang Ren DM&Sys
+16. Chi Wang DM&CV
+17. Hong Cheng CV&ML&DM
+18. Charu C. Aggarwal DM
+19. Qi Li CV&DB&DM&NLP&ML&Sys
+20. Thomas S. Huang CV
+21. Dacheng Tao CV
+22. Jie Tang DM
+23. Haixun Wang DM&DB
+24. Bo Li CV&DB&DM&NLP&ML&Sys
+25. Jing Gao DM
+26. Lance M. Kaplan DM
+27. Tarek Abdelzaher DM
+28. Ming-Hsuan Yang CV
+29. Dong Wang CV&DB&DM&NLP&ML
+30. Li Zhang CV&DB&DM&NLP&Theory
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Lu Su DM
+2.Tianyi Wu DM&DB
+3.Weizhu Chen DM
+4.Heung-Yeung Shum CV
+5.Xiaotao Gu NLP
+6.Simon See CV
+7.Heikki Mannila DM
+8.Jia-Bin Huang CV
+9.Steven Minton DM
+10.Roopnath Grandhi DM
+Recommended authors for deletion: 
+ 0. No deletion.
+1.Charu C. Aggarwal DM
+2.Li Zhang CV&DB&DM&NLP&Theory
+3.Hujun Bao CV&DB&DM
+4.Chao Zhang CV&DM&NLP&ML&Sys
+5.Bo Li CV&DB&DM&NLP&ML&Sys
+6.ChengXiang Zhai DM
+7.Hong Cheng CV&ML&DM
+8.Xiang Ren DM&Sys
+9.Thomas S. Huang CV
+10.Qi Li CV&DB&DM&NLP&ML&Sys

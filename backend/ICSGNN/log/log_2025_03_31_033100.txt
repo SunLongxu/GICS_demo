@@ -1,0 +1,92 @@
+Round 0 Result community:
+1. Larry A. Wasserman ML
+2. Min Xu CV&DB&DM&ML&Sys
+3. Han Liu CV&DM&NLP&ML&Sys
+4. Pradeep Ravikumar ML
+5. Jeff G. Schneider ML
+6. Anupam Gupta Theory
+7. John D. Lafferty ML
+8. Xi Chen CV&DM&NLP&Theory&ML&Sys
+9. Eric P. Xing ML
+10. Tuo Zhao ML
+11. Aarti Singh ML
+12. Tong Zhang CV&DM&NLP&ML&Sys
+13. Zhaoran Wang ML
+14. Wei Wang CV&DB&DM&NLP&ML&Sys
+15. Changsheng Xu CV
+16. Qingming Huang CV
+17. Barnabás Póczos ML
+18. Alex Smola ML
+19. Christos Faloutsos DM&NLP
+20. Katrina Ligett Theory
+21. Sivaraman Balakrishnan ML
+22. Michael I. Jordan ML
+23. Akshay Krishnamurthy ML
+24. Jiebo Luo CV&DM
+25. Xiangjian He CV
+26. Qi Tian CV
+27. Aaditya Ramdas ML
+28. Bo Li CV&DB&DM&NLP&ML&Sys
+29. Hanqing Lu CV&ML
+30. Inderjit S Dhillon ML
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Jiawei Han DM&DB
+2.Mladen Kolar ML
+3.Tzu-Kuo Huang ML
+4.Grant Schoenebeck Theory
+5.Chin-Hui Lee CV
+6.Xiang Cheng DM&DB&ML
+7.Rajat Sen ML
+8.Biswajit Paria ML
+9.Qiang Wu CV&DM&NLP&ML&Sys
+10.Yong Li CV&DB&DM&ML&Sys
+Recommended authors for deletion: 
+ 0. No deletion.
+1.Min Xu CV&DB&DM&ML&Sys
+Round 0 Result community:
+1. Ameet Talwalkar ML
+2. Michael I. Jordan ML
+3. Matei A. Zaharia DB
+4. Sanjiv Kumar ML
+5. Yadong Mu CV&DM
+6. Joseph E. Gonzalez ML
+7. Ling Huang DM&DB&ML
+8. Barzan Mozafari DB
+9. Mehryar Mohri ML
+10. Ion Stoica Sys
+11. John C. Duchi ML
+12. Wei Liu CV&DB&DM&NLP&ML
+13. Shuicheng Yan CV
+14. Michael J. Franklin DB
+15. Shih-Fu Chang CV&Sys
+16. Xuelong Li CV
+17. Henry Rowley CV
+18. Qi Tian CV
+19. Hang Qi DM&CV
+20. Samuel Madden DB
+21. Jiebo Luo CV&DM
+22. Meng Wang DM&DB&CV&NLP
+23. Thomas S. Huang CV
+24. Xin Wang CV&DB&DM&NLP&ML&Sys
+25. Eric P. Xing ML
+26. Anthony D. Joseph Sys
+27. Jun Wang CV&DB&DM&ML&Sys
+28. Tat-Seng Chua DM
+29. Corinna Cortes ML
+30. Peter L. Bartlett ML
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Justin Ma Sys
+2.David A. Patterson Sys
+3.Yi Liu CV&DB&DM&NLP&Sys
+4.Christos Faloutsos DM&NLP
+5.Xu Zhang DM&CV&Sys
+6.Manfred K. Warmuth ML
+7.Carlo Curino DB
+8.Song-Chun Zhu CV
+9.Tianbao Yang ML
+10.John D. Lafferty ML
+Recommended authors for deletion: 
+ 0. No deletion.
+1.Michael I. Jordan ML

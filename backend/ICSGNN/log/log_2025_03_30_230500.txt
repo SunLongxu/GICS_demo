@@ -1,0 +1,55 @@
+Round 1 Result community:
+1. Jiawei Han DM&DB
+2. Gang Wang CV&NLP&ML&DM
+3. Hujun Bao CV&DB&DM
+4. Philip S. Yu DM&DB&CV
+5. ChengXiang Zhai DM
+6. Xifeng Yan DM&DB
+7. Shuicheng Yan CV
+8. Chao Zhang CV&DM&NLP&ML&Sys
+9. Zheng Chen DM&NLP&ML
+10. Wei Wang CV&DB&DM&NLP&ML&Sys
+11. Ben Y. Zhao Sys
+12. Jian Pei DM&NLP
+13. Yi-Zhou Sun DM
+14. Qiang Yang DM&DB
+15. Haitao Zheng Sys
+16. Xiang Ren DM&Sys
+17. Thomas S. Huang CV
+18. Hong Cheng CV&ML&DM
+19. Dacheng Tao CV
+20. Chi Wang DM&CV
+21. Heng Ji NLP
+22. Charu C. Aggarwal DM
+23. Qi Li CV&DB&DM&NLP&ML&Sys
+24. Tarek Abdelzaher DM
+25. Ming-Hsuan Yang CV
+26. Bo Li CV&DB&DM&NLP&ML&Sys
+27. Jing Gao DM
+28. Jiebo Luo CV&DM
+29. Yong Li CV&DB&DM&ML&Sys
+30. Jie Tang DM
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Deng Cai DM&NLP
+2.Tianyi Wu DM&DB
+3.Lu Su DM
+4.Gui-Rong Xue DM&ML
+5.Xinyi Zhang Sys&DB
+6.Simon See CV
+7.Li Wang CV&DB&DM&NLP&ML
+8.Cyrus Shahabi DB
+9.Steven Minton DM
+10.Roopnath Grandhi DM
+Recommended authors for deletion: 
+ 0. No deletion.
+1.Gang Wang CV&NLP&ML&DM
+2.Yi-Zhou Sun DM
+3.Hujun Bao CV&DB&DM
+4.Tarek Abdelzaher DM
+5.Jian Pei DM&NLP
+6.Hong Cheng CV&ML&DM
+7.Jiebo Luo CV&DM
+8.Xiang Ren DM&Sys
+9.Qi Li CV&DB&DM&NLP&ML&Sys
+10.ChengXiang Zhai DM

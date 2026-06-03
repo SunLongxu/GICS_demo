@@ -1,0 +1,46 @@
+Round 0 Result community:
+1. Ugur Halici DB
+2. Edwin R. Hancock CV
+3. Fatma Ozcan DB
+4. Nesime Tatbul DB
+5. M. Tamer Özsu DB
+6. Timos Sellis DB
+7. Lei Chen CV&DB&DM&NLP&ML
+8. Yang Xiao CV&DB&NLP
+9. Özgür Ulusoy DM
+10. Asuman Dogac DB
+11. Walter Binder DM
+12. Adnan Yazıcı DB
+13. Zhiguo Cao CV
+14. Michael Stonebraker DB
+15. Jeffrey Xu Yu DB
+16. Volker Markl DB
+17. Chunhua Shen CV
+18. Richard C. Wilson CV
+19. Philip S. Yu DM&DB&CV
+20. Christian Søndergaard Jensen DB
+21. Beng Chin Ooi DB
+22. Laura M. Haas DB
+23. Gerhard Weikum DB
+24. Hamid Pirahesh DB
+25. Peter L. Elkin DB
+26. Hao Wang CV&DB&DM&NLP&ML&Sys
+27. Pinar Karagoz DM
+28. Donald Kossmann DB
+29. David Maier DB
+30. Theodore Dalamagas DM
+Recommended authors for insertion: 
+ 0. No insertion.
+1.Samuel Madden DB
+2.Ashraf Aboulnaga DB
+3.Ilkay Ulusoy ML
+4.Reynold Cheng DB
+5.Anastasia Ailamaki DB
+6.Ismail Sengor Altingovde DM
+7.Nihan Kesim Çiçekli DB
+8.Chao Ma CV&NLP&ML&DM
+9.Robert L. Grossman DM
+10.Boi Faltings DM
+Recommended authors for deletion: 
+ 0. No deletion.
+1.M. Tamer Özsu DB
