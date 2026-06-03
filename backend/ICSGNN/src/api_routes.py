@@ -101,7 +101,7 @@ def _get_node_keywords(instance, node):
         if hasattr(instance, "keywords"):
             if isinstance(instance.keywords, dict) and node in instance.keywords:
                 keywords_str = instance.keywords[node]
-            el            if isinstance(instance.keywords, list) and node < len(instance.keywords):
+            elif isinstance(instance.keywords, list) and node < len(instance.keywords):
                 keywords_str = instance.keywords[node]
             elif hasattr(instance.keywords, "__len__") and hasattr(
                 instance.keywords, "__getitem__"
