@@ -1,12 +1,2 @@
-from .layers import StackedGCN
-from .clustergcn import ClusterGCNTrainer
-from .utils import *
-from .parser import parameter_parser
-from .recommend import PPRRecommend
-from .subgraph import LocalCommunity
-
-# 确保src是一个Python包
-# 这将帮助解决导入问题
-
-# 使src目录成为一个Python包
-# 这个文件可以为空
+# GICS 包入口：勿在此 eager import torch 相关模块（Render lite 模式无 PyTorch）。
+# 各子模块请按需直接 from src.xxx import ...
