@@ -38,6 +38,9 @@ import { GraphData as ImportedGraphData, NodeType, EdgeType } from './types/grap
 // 注册dagre布局
 cytoscape.use(dagre)
 
+const publicAsset = (filename: string) =>
+  `${import.meta.env.BASE_URL}${filename}`
+
 // Color scheme that is colorblind-friendly and modern
 const COLORS = {
   query: '#3498db',     // Soft Blue
@@ -989,7 +992,7 @@ const layouts = {
               gap: 1
             }}>
               <img 
-                src="/hkbu_logo.jpg" 
+                src={publicAsset('hkbu_logo.jpg')} 
                 alt="HKBU Logo" 
                 style={{ 
                   height: '28px',
@@ -1007,16 +1010,18 @@ const layouts = {
               gap: 1
             }}>
               <img 
-                src="/sfu_logo.png" 
-                alt="SFU Logo" 
+                src={publicAsset('tsinghua_logo.png')} 
+                alt="清华大学 Tsinghua University" 
                 style={{ 
-                  height: '28px',
+                  height: '32px',
                   width: 'auto',
-                  opacity: 0.9
+                  maxWidth: '200px',
+                  objectFit: 'contain',
+                  opacity: 0.95
                 }} 
               />
               <Typography variant="subtitle1" sx={{ color: 'text.primary', fontSize: '1rem' }}>
-                Simon Fraser University
+                清华大学 · Tsinghua University
               </Typography>
             </Box>
           </Box>
@@ -1683,7 +1688,7 @@ const layouts = {
               opacity: 0.8
             }}
           >
-            © 2024 Interactive Community Search System (GICS) · MIT License
+            © 2026 Interactive Community Search System (GICS) · MIT License
           </Typography>
           <Typography 
             variant="caption" 
